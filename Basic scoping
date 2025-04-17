@@ -1,0 +1,16 @@
+x = 10  # Global scope
+
+def outer():
+    y = 20  # Enclosing scope
+    
+    def inner():
+        z = 30  # Local scope
+        print(x, y, z)  # Can access all three
+        
+    inner()
+    print(x, y)  # Can access x and y but not z
+    # print(z)  # Would raise NameError
+
+outer()
+print(x)  # Can only access x here
+# print(y, z)  # Would raise NameError
