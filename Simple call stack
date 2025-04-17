@@ -1,0 +1,23 @@
+def func1():
+    print("Entering func1")
+    func2()
+    print("Exiting func1")
+
+def func2():
+    print("Entering func2")
+    func3()
+    print("Exiting func2")
+
+def func3():
+    print("Entering func3")
+    print("Exiting func3")
+
+func1()
+
+# Output shows the stack order:
+# Entering func1
+# Entering func2
+# Entering func3
+# Exiting func3
+# Exiting func2
+# Exiting func1
